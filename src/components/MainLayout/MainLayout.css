@@ -1,0 +1,77 @@
+
+.normal {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.content {
+  flex: 1;
+  display: flex;
+}
+
+.main {
+  padding: 0 8px;
+  flex: 1 0 auto;
+}
+
+/*Pc端*/
+.headerPc {
+  display: block;
+}
+.headerFb {
+  display: none;
+  height: 60px;
+  background: red;
+  line-height: 60px;
+  text-align: center;
+}
+.headerMobile {
+  display: none;
+}
+
+/*手机端*/
+@media only screen and (max-width: 768px) {
+  .headerPc {
+    display: none;
+  }
+  .headerFb {
+    display: none;
+  }
+  .headerMobile {
+    display: block;
+
+  }
+}
+/*FB端*/
+@media only screen and (min-width: 768px)
+and (max-width: 1024px) {
+  .headerPc {
+    display: none;
+  }
+  .headerFb {
+    display: block;
+  }
+  .headerMobile {
+    display: none;
+  }
+}
+
+/*ipad**/
+@media only screen
+and (min-device-width: 768px)
+and (max-device-width: 1024px)
+and (orientation: portrait)
+and (-webkit-min-device-pixel-ratio: 1) {
+  .headerPc {
+    display: none;
+  }
+  .headerFb {
+    display: none;
+  }
+  .headerMobile {
+    display: block;
+  }
+}
+
+
